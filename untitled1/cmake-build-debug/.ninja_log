@@ -1,0 +1,27 @@
+# ninja log v5
+0	170	7360215112321903	build.ninja	26cc6d30141b9ad4
+9	122	7359488308236264	CMakeFiles/untitled1.dir/ball.cpp.obj	15cdcc8ae3ada443
+15	440	7359488311404462	CMakeFiles/untitled1.dir/game.cpp.obj	787f1d17459ac3c2
+441	587	7359488312824353	untitled1.exe	44aca19db6a622fb
+5	258	7359488309591178	CMakeFiles/untitled1.dir/player.cpp.obj	698213fb234d7452
+1	318	7359488310183230	CMakeFiles/untitled1.dir/main.cpp.obj	91614e3dfa071792
+23	163	7360215163445650	CMakeFiles/untitled1.dir/ball.cpp.obj	59269105a96874bc
+39	284	7360215164661557	CMakeFiles/untitled1.dir/player.cpp.obj	e61295be29f16819
+2	304	7360215164861047	CMakeFiles/untitled1.dir/main.cpp.obj	51907aaf72b5b55b
+58	404	7360215165863170	CMakeFiles/untitled1.dir/game.cpp.obj	71e08cc653904861
+405	592	7360215167688532	untitled1.exe	be8314a1ab7cb7ba
+4	105	7360218091064459	CMakeFiles/untitled1.dir/ball.cpp.obj	59269105a96874bc
+105	238	7360218092349091	untitled1.exe	be8314a1ab7cb7ba
+5	107	7360219210851414	CMakeFiles/untitled1.dir/ball.cpp.obj	59269105a96874bc
+19	204	7360219211863339	CMakeFiles/untitled1.dir/player.cpp.obj	e61295be29f16819
+204	330	7360219213064369	untitled1.exe	be8314a1ab7cb7ba
+4	181	7360219503669470	CMakeFiles/untitled1.dir/player.cpp.obj	e61295be29f16819
+181	300	7360219504804125	untitled1.exe	be8314a1ab7cb7ba
+4	186	7360219913030772	CMakeFiles/untitled1.dir/player.cpp.obj	e61295be29f16819
+186	314	7360219914277701	untitled1.exe	be8314a1ab7cb7ba
+31	1244	7363298067238764	CMakeFiles/untitled1.dir/player.cpp.obj	e61295be29f16819
+1245	1661	7363298071294931	untitled1.exe	be8314a1ab7cb7ba
+19	610	7363312236586197	CMakeFiles/untitled1.dir/player.cpp.obj	e61295be29f16819
+611	939	7363312239816837	untitled1.exe	be8314a1ab7cb7ba
+14	555	7363315551873628	CMakeFiles/untitled1.dir/player.cpp.obj	e61295be29f16819
+556	815	7363315554365477	untitled1.exe	be8314a1ab7cb7ba
