@@ -20,6 +20,7 @@ public:
     void SetRadius(float r);
     bool CheckCollisionWithActiveSide(Vector2 center, float radius, Player player);
     bool CheckCollisionWithPlayer(Vector2 center, float radius, Player player);
+    void Bounce(Player player);
 
 
 private:

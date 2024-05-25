@@ -8,10 +8,7 @@ Player::Player(Vector2 position, Vector2 size, Color color)
 
 void Player::Draw() {
     rlPushMatrix();
-    rlTranslatef(position.x + size.x / 2, position.y + size.y / 2, 0);
-    if (isRotating)
-        rlRotatef(rotationAngle, 0, 0, 1);
-    rlTranslatef(-size.x / 2, -size.y / 2, 0);
+    RotatePlayer();
     DrawRectangle(0, 0, size.x, size.y, color);
     DrawRectangle(size.x - ActiveSideWidth, 0, ActiveSideWidth, size.y, YELLOW);
     rlPopMatrix();
@@ -76,6 +73,10 @@ Rectangle Player::GetActiveSide() const {
     return activeSide;
 }
 
+Rectangle Player::GetPlayerBody() {
+    return {position.x, position.y, size.x, size.y};
+}
+
 bool Player::CheckCollisionWithBall(Ball &ball) {
     Rectangle activeSide = GetActiveSide();
     Vector2 ballCenter = ball.GetPosition();
@@ -92,9 +93,8 @@ void Player::SetColor(Color c) {
 }
 
 void Player::RotatePlayer() {
-    rlPushMatrix();
     rlTranslatef(position.x + size.x / 2, position.y + size.y / 2, 0);
-    rlRotatef(45, 0, 0, 1);
-    rlTranslatef(-position.x - size.x / 2, -position.y - size.y / 2, 0);
-    rlPopMatrix();
+    if (isRotating)
+        rlRotatef(rotationAngle, 0, 0, 1);
+    rlTranslatef(-size.x / 2, -size.y / 2, 0);
 }

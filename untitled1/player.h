@@ -17,6 +17,7 @@ public:
     Vector2 GetPosition() const;
     Vector2 GetSize() const;
     Rectangle GetActiveSide() const;
+    Rectangle GetPlayerBody();
     bool CheckCollisionWithBall(Ball &ball);
     void SetPosition(Vector2 p);
     void SetColor(Color c);
