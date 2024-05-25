@@ -57,7 +57,7 @@ void Game::Update()
 {
     if (player1.CheckCollisionWithBall(ball))
     {
-        std::cout << "WORKS!";
+        std::cout << "";
     }
     player1.Update();
     ball.Update(player1);

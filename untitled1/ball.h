@@ -1,5 +1,4 @@
-#ifndef BALL_H
-#define BALL_H
+#pragma once
 
 #include "raylib.h"
 #include "player.h"
@@ -19,7 +18,9 @@ public:
     Vector2 GetPosition() const;
     float GetRadius() const;
     void SetRadius(float r);
-    bool CheckCollisionCircleRec(Vector2 center, float radius, Player player);
+    bool CheckCollisionWithActiveSide(Vector2 center, float radius, Player player);
+    bool CheckCollisionWithPlayer(Vector2 center, float radius, Player player);
+
 
 private:
     Vector2 position;
@@ -33,4 +34,3 @@ private:
     Vector2 size;
 };
 
-#endif // BALL_H

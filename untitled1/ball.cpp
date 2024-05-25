@@ -12,20 +12,20 @@ void Ball::Draw() {
 void Ball::Update(Player player) {
     float x = player.GetPosition().x;
     float y = player.GetPosition().y;
-    if (!CheckCollisionCircleRec(position, radius, Player{Vector2{x, y}, Vector2{50, 50}, WHITE})) {
+    if (!CheckCollisionWithActiveSide(position, radius, player)) {
         position.x += ball_speed_x;
         position.y += ball_speed_y;
     }
 
-    if (position.x + radius >= 1000 || position.x - radius <= 0 ) {
+    if (position.x + radius >= screenWidth || position.x - radius <= 0 ) {
         ball_speed_x *= -1;
     }
 
-    if (position.y + radius >= 600 || position.y - radius <= 0 ) {
+    if (position.y + radius >= screenHeight || position.y - radius <= 0 ) {
         ball_speed_y *= -1;
     }
 
-    if (CheckCollisionCircleRec(position, radius, Player{Vector2{x, y}, Vector2{50, 50}, WHITE})) {
+    if (CheckCollisionWithActiveSide(position, radius, player)) {
         Updateposition();
         if (IsKeyDown(KEY_ENTER)) {
             Vector2 a = player.GetPosition();
@@ -73,7 +73,12 @@ void Ball::SetRadius(float r) {
     radius = r;
 }
 
-bool Ball::CheckCollisionCircleRec(Vector2 center, float radius, Player player) {
+bool Ball::CheckCollisionWithActiveSide(Vector2 center, float radius, Player player) {
+    Rectangle activeSide = player.GetActiveSide();
+    return CheckCollisionCircleRec(center, radius, activeSide);
+}
+
+bool Ball::CheckCollisionWithPlayer(Vector2 center, float radius, Player player) {
     if (center.x + radius >= player.GetPosition().x && center.x - radius <= player.GetPosition().x + player.GetSize().x &&
         center.y + radius >= player.GetPosition().y && center.y - radius <= player.GetPosition().y + player.GetSize().y) {
         return true;
