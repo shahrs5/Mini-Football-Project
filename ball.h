@@ -2,7 +2,10 @@
 
 #include "raylib.h"
 #include "player.h"
-class Player; // Forward declaration
+#include "cstdio"
+
+class Player; 
+
 class Ball
 {
 public:
@@ -10,17 +13,19 @@ public:
     Ball(Vector2 position, float radius, Color color);
 
     void Draw();
+    void DrawEnd();
     void Update(Player player);
-    Vector2 Updateposition();
+    void Updateposition(Player player);
     void Move(Vector2 direction);
     void SetPosition(Vector2 p);
     void SetColor(Color c);
     Vector2 GetPosition() const;
     float GetRadius() const;
     void SetRadius(float r);
-    bool CheckCollisionWithActiveSide(Vector2 center, float radius, Player player);
-    bool CheckCollisionWithPlayer(Vector2 center, float radius, Player player);
-    void Bounce(Player player);
+    bool CheckCollisionCircleRec(Vector2 center, float radius, Player player);
+    bool CheckGoal();
+    void DrawScore();
+    void Reset();
 
 
 private:
@@ -33,5 +38,8 @@ private:
     int screenWidth;
     float padding;
     Vector2 size;
-};
+    int score1;
+    int score2;
 
+
+};

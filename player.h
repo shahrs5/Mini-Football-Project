@@ -3,12 +3,13 @@
 #include "raylib.h"
 #include "rlgl.h"
 #include "ball.h"
-class Ball; // Forward declaration
+
+
 class Player
 {
 public:
     Player();
-    Player(Vector2 position, Vector2 size, Color color);
+    Player(int type, Vector2 position, Color color, float Angle);
 
     void Draw();
     Vector2 Update();
@@ -16,12 +17,15 @@ public:
     void setPlayer(Vector2 p, Vector2 s, Color c);
     Vector2 GetPosition() const;
     Vector2 GetSize() const;
-    Rectangle GetActiveSide() const;
-    Rectangle GetPlayerBody();
-    bool CheckCollisionWithBall(Ball &ball);
+    int getPlayerType();
+//     Rectangle GetActiveSide() const;
+//     bool CheckCollisionWithBall(Ball &ball);
     void SetPosition(Vector2 p);
     void SetColor(Color c);
     void RotatePlayer();
+    void TogglePossession();
+    bool CheckPossession() const;
+    void Reset();
 
 private:
     Vector2 position;
@@ -33,4 +37,6 @@ private:
     float rotationAngle;
     bool isRotating;
     int ActiveSideWidth;
+    bool Possession;
+    int playerType;
 };
