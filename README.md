@@ -20,3 +20,6 @@ After downloading the file, generate a new tasks.json file and then add all the 
 # Controls
 Player 1: WASD = Movement, E = Rotate, F = Left Shoot, G = Middle Shoot, H = Right Shoot
 Player 2: Arrow Keys = Movement,  SPACE = Rotate, J = Left Shoot, K = Middle Shoot, L = Right Shoot
+
+# Acknowledgments
+Shaheer Hussain was my partner in building this project
